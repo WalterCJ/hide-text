@@ -1,17 +1,17 @@
 {
-  "name": "@waltercj/reading-progress-bar",
-  "description": "Show a bar with your reading progress as you scroll down.",
+  "name": "@waltercj/hide-text",
+  "description": "Utility function to hide/mask information",
   "version": "0.1.0",
   "keywords": [
-    "read progress",
-    "bar",
-    "progress"
+    "mask",
+    "hide",
+    "hide text"
   ],
   "author": "WalterCJ (https://github.com/WalterCJ)",
   "license": "MIT",
-  "main": "dist/reading-progress-bar.cjs.js",
-  "module": "dist/reading-progress-bar.esm.js",
-  "browser": "dist/reading-progress-bar.umd.js",
+  "main": "dist/hide-text.cjs.js",
+  "module": "dist/hide-text.esm.js",
+  "browser": "dist/hide-text.umd.js",
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
@@ -35,7 +35,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/waltercj/reading-progress-bar.git"
+    "url": "https://github.com/waltercj/hide-text.git"
   },
   "dependencies": {}
 }
