@@ -1,5 +1,5 @@
 /*
- * @waltercj/hide-text
+ * hide-text
  * Utility function to hide/mask information
  * https://github.com/waltercj/hide-text.git
  * v0.1.0
@@ -9,7 +9,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global['@waltercj/hide-text'] = factory());
+  (global = global || self, global['hide-text'] = factory());
 }(this, function () { 'use strict';
 
   var options = {

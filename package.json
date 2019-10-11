@@ -1,5 +1,5 @@
 {
-  "name": "@waltercj/hide-text",
+  "name": "hide-text",
   "description": "Utility function to hide/mask information",
   "version": "0.1.0",
   "keywords": [
