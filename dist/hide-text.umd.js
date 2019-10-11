@@ -54,8 +54,6 @@
     return start + hiddenText + end;
   }
 
-  var hide = hideText;
-
-  return hide;
+  return hideText;
 
 }));

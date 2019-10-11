@@ -36,4 +36,4 @@ function hideText(text, userOptions = {}) {
   return start + hiddenText + end;
 }
 
-module.exports = hideText;
+export default hideText;

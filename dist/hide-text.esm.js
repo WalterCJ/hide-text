@@ -40,4 +40,4 @@ function hideText(text) {
   return start + hiddenText + end;
 }
 
-module.exports = hideText;
+export default hideText;
