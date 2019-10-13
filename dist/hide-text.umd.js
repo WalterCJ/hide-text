@@ -45,7 +45,7 @@
       end = text.slice(options.showRight * -1);
     }
 
-    hiddenText = text.slice(options.showLeft, options.showRight * -1 || -1).replace(/[a-zA-Z0-9]/g, options.placeholder);
+    hiddenText = text.slice(options.showLeft, options.showRight * -1 || text.length).replace(/[a-zA-Z0-9]/g, options.placeholder);
 
     if (options.clamp > 0) {
       hiddenText = hiddenText.slice(0, options.clamp);
@@ -54,6 +54,8 @@
     return start + hiddenText + end;
   }
 
-  return hideText;
+  var hide = hideText;
+
+  return hide;
 
 }));

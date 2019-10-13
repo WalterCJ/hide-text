@@ -17,7 +17,9 @@ function hideText(text, userOptions = {}) {
   }
 
   options = Object.assign(options, userOptions);
-  let start='', end='', hiddenText;
+  let start = '',
+    end = '',
+    hiddenText;
   if (options.showLeft > 0) {
     start = text.slice(0, options.showLeft);
   }
@@ -26,7 +28,7 @@ function hideText(text, userOptions = {}) {
   }
 
   hiddenText = text
-    .slice(options.showLeft, options.showRight * -1 || -1)
+    .slice(options.showLeft, options.showRight * -1 || text.length)
     .replace(/[a-zA-Z0-9]/g, options.placeholder);
 
   if (options.clamp > 0) {
@@ -36,4 +38,4 @@ function hideText(text, userOptions = {}) {
   return start + hiddenText + end;
 }
 
-export default hideText;
+module.exports =  hideText;
