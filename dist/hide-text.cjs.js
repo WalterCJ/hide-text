@@ -4,7 +4,7 @@ var options = {
   placeholder: '*',
   showLeft: 0,
   showRight: 0,
-  clamp: 0
+  trim: 0
 };
 /**
  * Hides the text by converting characters to asterisks or other placeholder.
@@ -16,8 +16,8 @@ function hideText(text) {
   var userOptions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   //just in case you send me something else...
-  if (!text) {
-    return text;
+  if (typeof text !== 'string') {
+    throw new Error("".concat(text, " is not a string"));
   }
 
   options = Object.assign(options, userOptions);
@@ -33,10 +33,10 @@ function hideText(text) {
     end = text.slice(options.showRight * -1);
   }
 
-  hiddenText = text.slice(options.showLeft, options.showRight * -1 || text.length).replace(/[a-zA-Z0-9]/g, options.placeholder);
+  hiddenText = text.slice(options.showLeft, options.showRight * -1 || text.length).replace(/[\S+]/g, options.placeholder);
 
-  if (options.clamp > 0) {
-    hiddenText = hiddenText.slice(0, options.clamp);
+  if (options.trim > 0) {
+    hiddenText = hiddenText.slice(0, options.trim);
   }
 
   return start + hiddenText + end;

@@ -2,7 +2,7 @@ let options = {
   placeholder: '*',
   showLeft: 0,
   showRight: 0,
-  clamp: 0
+  trim: 0
 };
 
 /**
@@ -12,8 +12,8 @@ let options = {
  */
 function hideText(text, userOptions = {}) {
   //just in case you send me something else...
-  if (!text) {
-    return text;
+  if (typeof text !== 'string') {
+    throw new Error(`${text} is not a string`);
   }
 
   options = Object.assign(options, userOptions);
@@ -29,13 +29,13 @@ function hideText(text, userOptions = {}) {
 
   hiddenText = text
     .slice(options.showLeft, options.showRight * -1 || text.length)
-    .replace(/[a-zA-Z0-9]/g, options.placeholder);
+    .replace(/[\S+]/g, options.placeholder);
 
-  if (options.clamp > 0) {
-    hiddenText = hiddenText.slice(0, options.clamp);
+  if (options.trim > 0) {
+    hiddenText = hiddenText.slice(0, options.trim);
   }
 
   return start + hiddenText + end;
 }
 
-module.exports =  hideText;
+module.exports = hideText;
