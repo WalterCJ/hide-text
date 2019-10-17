@@ -1,5 +1,4 @@
-import hideText from './hide'
-// const hideText = require('./hide');
+import hideText from './hide';
 
 describe('Hidetext', () => {
   test('Should return a hidden string using defaults', () => {

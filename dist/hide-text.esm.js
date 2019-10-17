@@ -13,15 +13,14 @@ var options = {
 function hideText(text) {
   var userOptions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-  //just in case you send me something else...
   if (typeof text !== 'string') {
     throw new Error("".concat(text, " is not a string"));
   }
 
   options = Object.assign(options, userOptions);
-  var start = '',
-      end = '',
-      hiddenText;
+  var start = '';
+  var end = '';
+  var hiddenText;
 
   if (options.showLeft > 0) {
     start = text.slice(0, options.showLeft);

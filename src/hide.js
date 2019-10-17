@@ -11,15 +11,14 @@ let options = {
  * @return {string}
  */
 function hideText(text, userOptions = {}) {
-  //just in case you send me something else...
   if (typeof text !== 'string') {
     throw new Error(`${text} is not a string`);
   }
 
   options = Object.assign(options, userOptions);
-  let start = '',
-    end = '',
-    hiddenText;
+  let start = '';
+  let end = '';
+  let hiddenText;
   if (options.showLeft > 0) {
     start = text.slice(0, options.showLeft);
   }
