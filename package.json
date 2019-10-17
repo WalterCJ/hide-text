@@ -1,7 +1,7 @@
 {
   "name": "hide-text",
   "description": "Utility function to hide/mask information",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "mask",
     "hide",
