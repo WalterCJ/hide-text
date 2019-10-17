@@ -2,7 +2,7 @@
  * hide-text
  * Utility function to hide/mask information
  * https://github.com/waltercj/hide-text.git
- * v0.1.1
+ * v1.0.2
  * MIT License
  */
 
@@ -54,8 +54,6 @@
     return start + hiddenText + end;
   }
 
-  var hide = hideText;
-
-  return hide;
+  return hideText;
 
 }));

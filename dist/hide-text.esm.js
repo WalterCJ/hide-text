@@ -40,6 +40,4 @@ function hideText(text) {
   return start + hiddenText + end;
 }
 
-var hide = hideText;
-
-export default hide;
+export default hideText;

@@ -19,15 +19,7 @@ const banner = `/*
 export default [
   {
     input,
-    output: [
-      {
-        name,
-        file: pkg.browser,
-        format: 'umd',
-        banner
-      },
-      { file: pkg.module, format: 'es' }
-    ],
+    output: { name, file: pkg.browser, format: 'umd', banner },
     external,
     plugins: [
       resolve(),
@@ -39,7 +31,7 @@ export default [
   },
   {
     input,
-    output: { file: pkg.main, format: 'cjs' },
+    output: [{ file: pkg.main, format: 'cjs' }, { file: pkg.module, format: 'es' }],
     external: esExternal,
     plugins: [
       babel({
