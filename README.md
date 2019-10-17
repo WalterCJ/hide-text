@@ -1,7 +1,7 @@
 # Hide-text  
 Convert a string of characters to asterisks or any other placeholder. It's great for masking information like API keys or any other data you don't want to fully show.
 
-[![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
+[![Coverage Status](https://coveralls.io/repos/github/WalterCJ/hide-text/badge.svg?branch=master)](https://coveralls.io/github/WalterCJ/hide-text?branch=master)[![Build Status](https://travis-ci.org/WalterCJ/hide-text.svg?branch=master)](https://travis-ci.org/WalterCJ/hide-text)[![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 
 ## Installation
 ```bash
